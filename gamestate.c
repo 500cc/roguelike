@@ -3,8 +3,11 @@
 #include "gamestate.h"
 
 UBYTE gamestate;
-UBYTE joystate;
+UBYTE joystate, oldjoystate;
 UBYTE sprites_used, next_sprite;
+
+UBYTE scroll_x, scroll_y;
+UBYTE player_x, player_y;
 
 void clearSprites(){
     UBYTE i;
@@ -14,6 +17,7 @@ void clearSprites(){
 }
 
 void updateJoystate(){
+    oldjoystate = joystate;
     joystate = joypad();
 }
 

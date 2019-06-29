@@ -10,7 +10,7 @@ void main(){
     //init hardware
     disable_interrupts();
     gamestate = GAMESTATE_TITLE;
-    joystate = 0U;
+    joystate = oldjoystate = 0U;
     enable_interrupts();
     
     while(1U){
