@@ -10,6 +10,7 @@ extern UBYTE joystate, oldjoystate;
 extern UBYTE next_sprite, sprites_used;
 
 extern UBYTE scroll_x, scroll_y;
+extern UBYTE player_local_x, player_local_y;
 extern UBYTE player_x, player_y;
 
 #define GAMESTATE_INGAME 0U

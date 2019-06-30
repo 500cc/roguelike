@@ -1,10 +1,10 @@
-#include <stdio.h>
+//#include <stdio.h>
 #include <gb/gb.h>
 #include "title.h"
 #include "gamestate.h"
 
 void initTitle(){
-    printf("PRESS START");
+    //printf("PRESS START");
 }
 
 void enterTitle(){

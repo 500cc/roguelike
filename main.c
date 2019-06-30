@@ -1,5 +1,5 @@
-#include <stdio.h>
-//#include <gb/gb.h>
+//#include <stdio.h>
+#include <gb/gb.h>
 #include "main.h"
 
 #include "gamestate.h"
