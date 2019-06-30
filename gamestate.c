@@ -7,7 +7,6 @@ UBYTE joystate, oldjoystate;
 UBYTE sprites_used, next_sprite;
 
 UBYTE scroll_x, scroll_y;
-UBYTE player_local_x, player_local_y;
 UBYTE player_x, player_y;
 
 void clearSprites(){

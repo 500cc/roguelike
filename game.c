@@ -35,13 +35,11 @@ void initGame(){
     set_sprite_data(7U, 1U, shami_tile_data + 240U);
 
     clearSprites();
-    setSprite(0U, 0U, 4U, 0U);
-    setSprite(8U, 0U, 6U, 0U);
+    setSprite(80U, 72U, 4U, 0U);
+    setSprite(88U, 72U, 6U, 0U);
 
     player_x = 0U;
     player_y = 0U;
-    player_local_x = 0U;
-    player_local_y = 0U;
     
     SHOW_BKG;
     SHOW_WIN;
@@ -64,31 +62,10 @@ void updatePlayer(){
         player_y += 1U;
     }
 
-    player_local_x = 4U << 4U;
-    player_local_y = 3U << 4U;
     scroll_x = player_x - 4U << 4U;
     scroll_y = player_y - 3U << 4U;
 
-    if(player_x < 5U){
-        player_local_x = player_x << 4U;
-        scroll_x = 0;
-    }
-    if(player_x > (LEVEL_WIDTH - 5U)){
-        player_local_x = player_x + 8U - LEVEL_WIDTH << 4U;
-        scroll_x = LEVEL_WIDTH - 8U << 4U;
-    }
-    if(player_y < 4U){
-        player_local_y = player_y << 4U;
-        scroll_y = 0;
-    }
-    if(player_y > LEVEL_HEIGHT - 3U){
-        player_local_y = player_y + 6U - LEVEL_HEIGHT << 4U;
-        scroll_y = LEVEL_HEIGHT - 6U << 4U;
-    }
-
     move_bkg(scroll_x, scroll_y);
-    setSprite(player_local_x + 16U, player_local_y + 24U, 4U, 0U);
-    setSprite(player_local_x + 24U, player_local_y + 24U, 6U, 0U);
 }
 
 void updateHUD(){
